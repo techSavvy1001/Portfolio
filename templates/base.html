@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Karan Raj | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-[#0f0f0f] text-white font-sans scroll-smooth">
+
+    <nav class="w-full p-4 bg-[#111111] text-white flex justify-between">
+        <h1 class="text-2xl font-bold">Karan Raj</h1>
+        <div class="space-x-4">
+            <a href="/" class="hover:text-yellow-400">Home</a>
+            <a href="/about" class="hover:text-yellow-400">About</a>
+            <a href="/projects" class="hover:text-yellow-400">Projects</a>
+            <a href="/contact" class="hover:text-yellow-400">Contact</a>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .project-timeline{position:relative;padding:20px 0;list-style:none}.project-timeline::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:4px;background-color:#333;transform:translateX(-50%);z-index:0}.project-timeline-line-animated{position:absolute;top:0;bottom:0;left:50%;width:4px;background-color:#fcd34d;transform:translateX(-50%) scaleY(0);transform-origin:top;transition:transform 1s ease-out;z-index:1}.project-timeline-item{position:relative;margin-bottom:60px;display:flex;align-items:center;width:100%;flex-direction:row}.project-timeline-item:nth-child(even){flex-direction:row-reverse}.project-timeline-content{background-color:#1a1a1a;padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,.4);width:calc(50% - 40px);position:relative;text-align:left;transition:transform .3s ease-in-out,box-shadow .3s ease-in-out}.project-timeline-content:hover{transform:translateY(-8px);box-shadow:0 8px 25px rgba(0,0,0,.6)}.project-timeline-item:nth-child(odd) .project-timeline-content{margin-right:40px}.project-timeline-item:nth-child(even) .project-timeline-content{margin-left:40px}.project-timeline-dot{width:20px;height:20px;background-color:#fcd34d;border:4px solid #333;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;transition:all .3s ease}.project-timeline-dot:hover{transform:translate(-50%,-50%) scale(1.3);background-color:#fde047}.project-timeline-content::before{content:'';position:absolute;top:50%;width:40px;height:2px;background-color:#fcd34d;transform:translateY(-50%);z-index:0}.project-timeline-item:nth-child(odd) .project-timeline-content::before{right:-40px}.project-timeline-item:nth-child(even) .project-timeline-content::before{left:-40px}@media (max-width:768px){.project-timeline::before,.project-timeline-line-animated{left:20px}.project-timeline-item{flex-direction:row;margin-left:20px}.project-timeline-content{width:calc(100% - 60px);margin-left:40px;margin-right:0;text-align:left}.project-timeline-item:nth-child(even) .project-timeline-content{margin-left:40px}.project-timeline-item:nth-child(even) .project-timeline-content::before{left:-40px;right:auto}.project-timeline-dot{left:20px;transform:translate(-50%,-50%)}.project-timeline-dot:hover{transform:translate(-50%,-50%) scale(1.3)}}
+</style>
+
+<section class="max-w-6xl mx-auto py-16 px-4 text-white" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-12 text-center text-yellow-400">My Creations & Code Adventures ✨</h2>
+
+    <div class="project-timeline-container relative">
+        <div id="animated-project-timeline-line" class="project-timeline-line-animated"></div>
+        <ul class="project-timeline">
+            <li class="project-timeline-item" data-aos="fade-right">
+                <div class="project-timeline-dot"></div>
+                <div class="project-timeline-content">
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-2">GptX – Text Generation LLM</h3>
+                    <p class="text-gray-300 mb-3">Dive into the realm of cutting-edge AI! I meticulously **engineered a transformer-based Large Language Model** from the ground up using **PyTorch**, meticulously training it on a colossal **45GB dataset**. This wasn't just coding; it was sculpting intelligence to generate captivating text!</p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">PyTorch</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Transformers</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Large Language Models</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Python</span>
+                    </div>
+                </div>
+            </li>
+            <li class="project-timeline-item" data-aos="fade-left">
+                <div class="project-timeline-dot"></div>
+                <div class="project-timeline-content">
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-2">InstantDetect – Real-Time Segmentation</h3>
+                    <p class="text-gray-300 mb-3">Experience the magic of real-time computer vision! I developed **InstantDetect** to perform lightning-fast **image segmentation and object detection**. By integrating the power of **PixelLib with OpenCV**, I brought visual perception to life, allowing machines to "see" and understand their environment instantly.</p>
+                     <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Computer Vision</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">OpenCV</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">PixelLib</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Image Segmentation</span>
+                    </div>
+                </div>
+            </li>
+            <li class="project-timeline-item" data-aos="fade-right">
+                <div class="project-timeline-dot"></div>
+                <div class="project-timeline-content">
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-2">TravelLux – AI Travel Platform</h3>
+                    <p class="text-gray-300 mb-3">Embark on a journey with **TravelLux**! This wasn't just a website; it's a **full-stack MERN application** I built from scratch, complete with seamless **booking flows, secure payment gateways, and an intelligent AI travel assistant**. It's about crafting delightful user experiences through robust web architecture.</p>
+                     <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">MERN Stack</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">React.js</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Node.js</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">MongoDB</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Express.js</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Stripe API</span>
+                    </div>
+                </div>
+            </li>
+            <li class="project-timeline-item" data-aos="fade-left">
+                <div class="project-timeline-dot"></div>
+                <div class="project-timeline-content">
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-2">COVID-19 India Dashboard</h3>
+                    <p class="text-gray-300 mb-3">Transforming raw data into actionable insights! I created a compelling **Tableau dashboard** for the **COVID-19 pandemic in India**, vividly **visualizing complex epidemiological data**. This project highlights my ability to turn numbers into clear narratives that inform and educate.</p>
+                     <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Tableau</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Data Visualization</span>
+                        <span class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full">Data Analysis</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded',function(){const timelineLine=document.getElementById('animated-project-timeline-line'),timelineContainer=document.querySelector('.project-timeline-container');function animateTimelineLine(){if(timelineContainer&&timelineLine){const e=timelineContainer.getBoundingClientRect(),t=window.innerHeight||document.documentElement.clientHeight;let n=0;e.top<t&&e.bottom>0&&(n=(Math.min(e.bottom,t)-Math.max(e.top,0))/e.height),n=Math.max(0,Math.min(1,n)),timelineLine.style.transform=`translateX(-50%) scaleY(${n})`}}window.addEventListener('scroll',animateTimelineLine),animateTimelineLine()});
+</script>
+{% endblock %}

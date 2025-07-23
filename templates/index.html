@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% block content %}
+<style>
+    /* Keyframe for a subtle pulse animation */
+    @keyframes pulse-yellow {
+        0% { border-color: #fcd34d; } /* Tailwind yellow-400 */
+        50% { border-color: #fde047; } /* A slightly lighter yellow for pulse effect */
+        100% { border-color: #fcd34d; }
+    }
+    .animate-pulse-border {
+        animation: pulse-yellow 2s infinite ease-in-out;
+    }
+</style>
+
+<section class="flex flex-col items-center justify-center text-center py-20 min-h-screen bg-gradient-to-r from-black to-[#1a1a1a]" data-aos="fade-up">
+    <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Karan" class="w-75 h-60 rounded-lg border-1 border-yellow-400 mb-4 animate-pulse-border">
+    <h2 class="text-4xl font-bold mb-2 text-white">Hey, I'm Karan Raj 👋</h2>
+    <p class="text-lg text-gray-400 max-w-xl mb-8">
+        As a skilled software engineer, I specialize in solving complex challenges through elegant web development. 
+        My work is driven by a commitment to innovation and delivering robust, user-centric experiences.
+    </p>
+    <div class="flex space-x-4">
+        <a href="/projects" class="bg-yellow-500 text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105">View My Work</a>
+        <a href="/contact" class="border border-yellow-500 text-yellow-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-500 hover:text-black transition duration-300 ease-in-out transform hover:scale-105">Get In Touch</a>
+    </div>
+</section>
+{% endblock %}
+
