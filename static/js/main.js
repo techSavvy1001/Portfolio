@@ -1,1 +1,1 @@
-console.log("Smooth like your portfolio, babe 😏");
+console.log("Hello");
